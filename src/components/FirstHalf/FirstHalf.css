@@ -1,12 +1,5 @@
 .firsthalf {
     width: 100%;
-    min-height: 100px;
-    /* background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%); */
-    /* background-image: url('./daniel-korpai-pKRNxEguRgM-unsplash.jpg');
-    background-repeat: no-repeat;
-    background-position: 90% 50%; */
-
-   
 }
 
 .container {
@@ -21,6 +14,7 @@
 
 .content {
     width: 50%;
+    height: 100%;
 }
 
 .content h3 {
@@ -28,6 +22,7 @@
     font-size: 26px;
     color: #0f172a;
     margin-bottom: 22px;
+    margin-top: 20px;
 }
 
 .content h1 {
@@ -40,4 +35,61 @@
 
 .content h1 span {
     color: red;
+}
+
+.dark {
+    display: block;
+}
+
+@media screen and (max-width: 872px) {
+
+    .firsthalf {
+        margin-top: 0;
+    }
+
+    .content h3 {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: #fff;
+        padding-top: 50px;
+        padding-left: 10px;
+    }
+
+    .dark {
+        display: block;
+        background-color: black;
+        width: 100%;
+        height: 80vh;
+        opacity: 0.8;
+    }
+
+    .container {
+        padding: 0;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .content h1 {
+        font-size: 30px;
+        color: white;
+    }
+
+    .content p {
+        width: 100%;
+        color: white;
+        font-size: 18px;
+    }
+    .content {
+        width: 100%;
+        padding-left: 20px;
+    }
+
+    .content h1 span {
+        display: block;
+    }
+
+
+
+
+
 }

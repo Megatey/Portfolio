@@ -2,11 +2,13 @@ import './Header.css'
 const Header = () => {
     return (
         <div className="header">
-            <div className="siteName"><span>N</span>ame</div>
+            <div className="siteName">
+                <img src="/myphoto.jpg" alt="profile pic" className="logo-image" />
+            </div>
             <ul className="navList">
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
+               <a href="/#Home"><li>Home</li></a>
+                <a href="/#Profile"><li>About</li></a>
+                <a href="/#ContactPage"><li>Contact</li></a>
             </ul>
         </div>
     )

@@ -1,13 +1,13 @@
 import './About.css'
 const About = () => {
     return (
-        <div className="AboutPage">
+        <div className="AboutPage" id="Profile">
             <div className="AboutText">
                 <span>
                     About me
                 </span>
                 <h1>About Me</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, egestas. Id fermentum nullam ipsum massa.</p>
+                <p>I'm a front-end Web developer, who is specialize at creating a good quality responsive websites for user friendly experiences.</p>
             </div>
             <div className="myInfo">
                 <div className="myImage"></div>

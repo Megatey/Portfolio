@@ -1,5 +1,6 @@
 import './Contact.css'
 import React, { useState } from 'react'
+import axios from 'axios'
 
 const Contact = () => {
 
@@ -17,12 +18,25 @@ const Contact = () => {
         setTextInput({ ...textInput, [name]: value });
     }
 
-    const submitData = (e) => {
+    const submitData = async (e) => {
         console.log(textInput);
+      const sendData = await axios.post("" ,{
+          header: {
+            'Content-Type': 'Appliction/json'
+          },
+          body : {
+              name: textInput.name,
+              email: textInput.email,
+              subject: textInput.subject,
+              messgae: textInput.message
+          }
+      })
+      const res = await sendData.data
+      console.log(res)
         e.preventDefault()
     }
     return (
-        <div className="Contact">
+        <div className="Contact" id="ContactPage">
             <div className="Contact-details">
                 <div className="Contact-text">
                     <span>Contact</span>

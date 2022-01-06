@@ -1,8 +1,8 @@
-import './Footer'
+import './Footer.css'
 const Footer = () => {
     return (
-        <div>
-            
+        <div className="Footer">
+            <p>© 2021 by Tijani Ibrahim. All rights reserved.</p>
         </div>
     )
 }

@@ -157,3 +157,35 @@
     background: #f52225;
     color: #fff;
 }
+
+@media screen and (max-width: 872px) {
+    
+
+
+.Contact-details .Contact-text h2 {
+    font-size: 30px;
+
+}
+
+.Contact {
+    padding: 20px;
+    flex-direction: column;
+}
+
+.right-container .fields .contact-form .second-row {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right-container .fields .contact-form .second-row .left {
+    margin-bottom: 58px;
+}
+
+.Contact-details .short-list ul li a {
+    margin-left: 40px;
+}
+
+
+
+
+}
