@@ -1,0 +1,56 @@
+.FloatNav {
+    display: none;
+  }
+  
+  
+  @media screen and (max-width: 872px) {
+    .FloatNav {
+      position: fixed;
+      bottom: 0;
+      height: 10vh;
+      width: 100%;
+      background-color: #fff;
+      z-index: 500;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      align-items: center;
+    }
+    
+    .FloatNav p {
+      font-size: 14px;
+      color: black;
+      margin-top: -5px;
+    }
+    
+    svg {
+      margin-left: 5px;
+    }
+    
+    .home {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 5px;
+    }
+    
+    .about {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 5px;
+    }
+    
+    .contact {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 5px;
+    }
+  
+    
+  
+  
+  
+  
+  }

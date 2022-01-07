@@ -136,18 +136,37 @@
 
 .myInfo {
     flex-direction: column;
-    /* background-color: salmon; */
-    height: 1100px;
+    height: 900px;
+    width: 100%;
 }
 
 .InfoText {
     margin-left: 5px;
 }
 
-.AboutPage {
-    padding: 10px;
-    justify-content: space-between;
+.InfoText h3 {
+    font-size: 24px;
+    margin-top: 20px;
 }
 
+.AboutPage {
+    padding: 30px;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.list ul li p {
+    font-size: 14px;
+}
+
+.extra .list ul li p {
+    font-size: 14px;
+}
+
+.extra .list {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+}
 
 }

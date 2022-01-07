@@ -1,7 +1,6 @@
 .Contact {
     width: 100%;
     height: auto;
-    /* background-color: red; */
     margin-top: 50px;
     padding: 50px;
     display: flex;
@@ -170,6 +169,7 @@
 .Contact {
     padding: 20px;
     flex-direction: column;
+    margin-top: 0;
 }
 
 .right-container .fields .contact-form .second-row {

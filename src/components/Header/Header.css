@@ -45,7 +45,6 @@
 }
 
 .navList li:hover {
-    /* background-color: #fff; */
     color: red;
     font-weight: 900;
 }
