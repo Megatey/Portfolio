@@ -1,40 +1,32 @@
 import './Contact.css'
-import React, { useState } from 'react'
-import axios from 'axios'
+import React, { useRef, useState } from 'react'
+import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
 
 const Contact = () => {
+    const form = useRef();
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
 
-    const customerInput = {
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-    }
-
-    const [textInput, setTextInput] = useState(customerInput);
-
-    const onChange = (e) => {
-        const { name, value } = e.target;
-        setTextInput({ ...textInput, [name]: value });
-    }
-
-    const submitData = async (e) => {
-        console.log(textInput);
-      const sendData = await axios.post("" ,{
-          header: {
-            'Content-Type': 'Appliction/json'
-          },
-          body : {
-              name: textInput.name,
-              email: textInput.email,
-              subject: textInput.subject,
-              messgae: textInput.message
-          }
-      })
-      const res = await sendData.data
-      console.log(res)
-        e.preventDefault()
-    }
+    const sendEmail = (e) => {
+        e.preventDefault();
+        if (!name || !email || !message) {
+          toast.warn('Please enter a name or email address or message')
+          return;
+        }
+    
+        emailjs.sendForm('service_3rb0zjr', 'template_c8yrsfx', form.current, '7zYKtBmwozyYf1nPY')
+          .then((result) => {
+              console.log(result.text);
+              if (result.text === 'OK') {
+                toast.success('Email sent successfuly')
+              }
+          }, (error) => {
+              console.log(error.text);
+          });
+      };
+ 
     return (
         <div className="Contact" id="ContactPage">
             <div className="Contact-details">
@@ -50,7 +42,7 @@ const Contact = () => {
                         </li>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="svg" fill="#f52225"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z" /></svg>
-                            <a href="gmail.com">megatey97@gmail.com</a>
+                            <a href="https://www.gmail.com" target='_blank' rel="noreferrer">megatey97@gmail.com</a>
                         </li>
                     </ul>
                 </div>
@@ -60,20 +52,17 @@ const Contact = () => {
                     <p>I am always open to discussing product <br /> <span>projects or partnership</span></p>
                 </div>
                 <div className="fields">
-                    <form className="contact-form" onSubmit={submitData}>
+                    <form className="contact-form" ref={form} onSubmit={sendEmail}>
                         <div className="first-row">
-                            <input name="name" type="text" placeholder="Name *" value={textInput.name} onChange={onChange} />
+                            <input type="text" placeholder="Name *" name="from_name" onChange={(e) => setName(e.target.value)} className="name" />
                         </div>
                         <div className="second-row">
                             <div className="left">
-                                <input name="email" type="email" placeholder="Email *" value={textInput.email} onChange={onChange} />
-                            </div>
-                            <div className="right">
-                                <input name="subject" type="text" placeholder="Subject *" value={textInput.subject} onChange={onChange} />
+                                <input className="email" type="email" placeholder="Email *" name="from_email" onChange={(e) => setEmail(e.target.value)}  />
                             </div>
                         </div>
                         <div className="third-row">
-                            <textarea name="message" placeholder="Message *" value={textInput.message} onChange={onChange}>
+                            <textarea  placeholder="Message *" name="message" onChange={(e) => setMessage(e.target.value)} >
 
                             </textarea>
                         </div>

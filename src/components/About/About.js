@@ -10,7 +10,9 @@ const About = () => {
                 <p>I'm a front-end Web developer, who is specialize at creating a good quality responsive websites for user friendly experiences.</p>
             </div>
             <div className="myInfo">
-                <div className="myImage"></div>
+                <div className="myImage">
+                    <img src="./myphoto.jpg" alt="dp" width="100%" height="100%" className='mydp' />
+                </div>
                 <div className="InfoText">
                     <h3>I'm Tijani Ibrahim</h3>
                     <h5>A <span>Web developer</span> based in <span>Nigeria</span></h5>
@@ -28,7 +30,7 @@ const About = () => {
                                 <li>
                                     <p>
                                         <span>Age: </span>
-                                        24 Years Old
+                                        26 Years Old
                                     </p>
                                 </li>
                                 <li>
@@ -46,13 +48,13 @@ const About = () => {
                                 <li>
                                     <p>
                                         <span className="skills">Skills: </span>
-                                        HTML, CSS, Javascript, ReactJs
+                                        MERN
                                     </p>
                                 </li>
                                 <li>
                                     <p>
                                         <span className="experience">Experience: </span>
-                                        2 years
+                                        4 years
                                     </p>
                                 </li>
                             </ul>

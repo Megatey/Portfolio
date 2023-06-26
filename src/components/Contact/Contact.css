@@ -121,6 +121,14 @@
     margin-bottom: 58px;
 }
 
+.right-container .fields .contact-form .second-row .left {
+    width: 100%;
+}
+
+.right-container .fields .contact-form .second-row .left .email {
+    width: 100%;
+}
+
 .right-container .fields .contact-form .third-row {
     width: 100%;
     margin-bottom: 30px;
@@ -155,7 +163,7 @@
     border-color: #f52225;
     background: #f52225;
     color: #fff;
-}
+} 
 
 @media screen and (max-width: 872px) {
     
